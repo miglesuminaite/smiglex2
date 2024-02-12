@@ -41,7 +41,9 @@ while True:
             print(num1, "/", num2, "=", dalyba(num1, num2))
         
         kitas_skaiciavimas = input("Skaiciuojam dar karta? (taip/ne): ")
-        if kitas_skaiciavimas == "ne":
-          break
+
+        if kitas_skaiciavimas == "taip":
+          continue
+        else: break
     else:
-        print("Error. Bandom dar karta.")
+        print("Blogai. Iveskite dar karta")
