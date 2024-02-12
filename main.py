@@ -1,34 +1,21 @@
 
-
-
-kintamasis = 1
-kintamasis2 = 2
-
-def funkcija ():
-    print(kintamasis)
-    print(kintamasis2)
-    print(f'test:{kintamasis2}{kintamasis}')
-    print('test:{}{}'.format(kintamasis2, kintamasis))
-
-    #Komentaras 
-
-    def sudetis(pirmas,antras):
+def sudetis(pirmas,antras):
         return pirmas+antras
     
-    def atimtis(pirmas,antras):
-        return pirmas-antras
+def atimtis(pirmas,antras):
+    return pirmas-antras
 
-    def daugyba(pirmas,antras):
-        return pirmas*antras
+def daugyba(pirmas,antras):
+    return pirmas*antras
 
-    def dalyba(pirmas,antras):
-        return pirmas/antras
+def dalyba(pirmas,antras):
+    return pirmas/antras
 
-    print("Pasirinkite norima veiksma:")
-    print("[1] Sudetis")
-    print("[1] Atimtis")
-    print("[1] Daugyba")
-    print("[1] Dalyba")
+print("Pasirinkite norima veiksma:")
+print("[1] Sudetis")
+print("[1] Atimtis")
+print("[1] Daugyba")
+print("[1] Dalyba")
 
 while True:
     choice = input("Iveskite pasirinkima(1/2/3/4): ")
@@ -42,19 +29,19 @@ while True:
             continue
 
         if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
+            print(num1, "+", num2, "=", sudetis(num1, num2))
 
         elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
+            print(num1, "-", num2, "=", atimtis(num1, num2))
 
         elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
+            print(num1, "*", num2, "=", daugyba(num1, num2))
 
         elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
+            print(num1, "/", num2, "=", dalyba(num1, num2))
         
-        next_calculation = input("Skaiciuojam dar karta? (taip/ne): ")
-        if next_calculation == "ne":
+        kitas_skaiciavimas = input("Skaiciuojam dar karta? (taip/ne): ")
+        if kitas_skaiciavimas == "ne":
           break
     else:
         print("Error. Bandom dar karta.")
