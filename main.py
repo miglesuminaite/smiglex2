@@ -12,4 +12,16 @@ def funkcija ():
 
     #Komentaras 
 
+    def sudetis(pirmas,antras):
+        return pirmas+antras
+    
+    def atimtis(pirmas,antras):
+        return pirmas-antras
+
+    def daugyba(pirmas,antras):
+        return pirmas*antras
+
+    def dalyba(pirmas,antras):
+        return pirmas/antras
+
     
