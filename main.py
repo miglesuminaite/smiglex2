@@ -24,4 +24,8 @@ def funkcija ():
     def dalyba(pirmas,antras):
         return pirmas/antras
 
-    
+    print("Pasirinkite norima veiksma:")
+    print("[1] Sudetis")
+    print("[1] Atimtis")
+    print("[1] Daugyba")
+    print("[1] Dalyba")
