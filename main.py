@@ -1,6 +1,21 @@
 from flask import Flask, request
 app = Flask(__name__)
 
+skaicius = 0 # apsirasome kintamaji ( Globalus )
+
+def sudetis(pirmas,antras):
+        return pirmas+antras
+
+@app.route("/skaicius") # Route 3
+def skaiciavimo():
+    #UZKLAUSA. ARGUMENTAI. METODAS()
+    skaicius = request.args.get("test") ### Pasiimam argumenta is URL pvz.: /skaicius?test=100
+    skaicius2 = request.args.get("test2") ### Pasiimam argumenta 2 is URL pvz.: /skaicius?test2=100
+
+    suma = sudetis(int(skaicius2),int(skaicius))
+
+    return f"Tavo ivestas skaicius: {suma}"
+
 if __name__ == "__main__":
     app.run()
 
