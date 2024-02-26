@@ -29,6 +29,10 @@ def hello_world():
                     <label for="test2">skaicius 2</label><br>
                         <input type="text" id="test2" name="test2" value="0"><br><br>
                         </br></br>
+
+                        <label for="veiksmas">Matematinis veiksmas</label><br>   
+                        <input type="text" id="veiksmas" name="veiksmas" value="0"><br><br>
+                        </br></br>
                         
                     <input type="submit" value="Submit">
                 </form> 
