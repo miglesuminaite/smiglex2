@@ -2,17 +2,37 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
-def sudetis (pirmas,antras):
-    return pirmas+antras
+def sudetis(pirmas,antras):
+        return pirmas+antras
 
-@app.route ("/") #Route 1
+@app.route("/") # Route 1
 def hello_world():
-    return "Labas"
 
-@app.route("/skaicius") #Route 2
-def skaiciuoti():
-    sum = sudetis(1,2)
-    return sum
+    return "Labas" """
+                <form action="/skaicius">
+                    <label for="test">skaicius 1</label><br>
+                        <input type="text" id="test" name="test" value="0"><br>
+                        </br></br>
+
+                    <label for="test2">skaicius 2</label><br>
+                        <input type="text" id="test2" name="test2" value="0"><br><br>
+                        </br></br>
+                        
+                    <input type="submit" value="Submit">
+                </form> 
+            """
+
+@app.route("/labas")  # Route 2
+def sakyk_labas():
+    global skaicius ## Naudoju globalu kintamaji
+    skaicius = skaicius +1 ## kaskart atidare pridedam 1
+    return f"Labas {skaicius}"
+
+
+    '''
+        /skaicius?test=100
+        /skaicius?test=0  &  test2=0
+    '''
 
 @app.route("/skaicius") # Route 3
 def skaiciavimo():
