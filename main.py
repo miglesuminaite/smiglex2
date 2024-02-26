@@ -1,6 +1,10 @@
 from flask import Flask, request
 app = Flask(__name__)
 
+@app.route ("/") #Route 1
+def hello_world():
+    return "Labas"
+
 skaicius = 0 # apsirasome kintamaji ( Globalus )
 
 def sudetis(pirmas,antras):
@@ -18,7 +22,6 @@ def skaiciavimo():
 
 if __name__ == "__main__":
     app.run()
-
 
 
 def sudetis(pirmas,antras):
