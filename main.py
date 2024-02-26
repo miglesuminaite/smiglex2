@@ -12,7 +12,10 @@ def daugyba(pirmas,antras):
         return pirmas*antras
 
 def dalyba(pirmas,antras):
-        return pirmas/antras
+        if antras !=0:
+            return pirmas/antras
+        else:
+             return "Dalyba is nulio negalima."
 
 @app.route("/") # Route 1
 def hello_world():
