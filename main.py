@@ -5,6 +5,15 @@ app = Flask(__name__)
 def sudetis(pirmas,antras):
         return pirmas+antras
 
+def atimtis(pirmas,antras):
+        return pirmas-antras
+
+def daugyba(pirmas,antras):
+        return pirmas*antras
+
+def dalyba(pirmas,antras):
+        return pirmas/antras
+
 @app.route("/") # Route 1
 def hello_world():
 
@@ -42,7 +51,7 @@ def skaiciavimo():
 
     suma = sudetis(int(skaicius2),int(skaicius))
 
-    return f"Tavo ivestas skaicius: {suma}"
+    return f"Gauta suma: {suma}"
 
 if __name__ == "__main__":
     app.run()
