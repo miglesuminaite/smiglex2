@@ -48,7 +48,8 @@ def sakyk_labas():
 
 @app.route("/skaicius") # Route 3
 def skaiciavimo():
-    #UZKLAUSA. ARGUMENTAI. METODAS()
+    if not request.args.get("test") or not request.args.get("test2"):
+         return "Nera argumento."
     skaicius = request.args.get("test") ### Pasiimam argumenta is URL pvz.: /skaicius?test=100
     skaicius2 = request.args.get("test2") ### Pasiimam argumenta 2 is URL pvz.: /skaicius?test2=100
 
