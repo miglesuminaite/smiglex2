@@ -1,14 +1,18 @@
 from flask import Flask, request
 app = Flask(__name__)
 
+
+def sudetis (pirmas,antras):
+    return pirmas+antras
+
 @app.route ("/") #Route 1
 def hello_world():
     return "Labas"
 
-skaicius = 0 # apsirasome kintamaji ( Globalus )
-
-def sudetis(pirmas,antras):
-        return pirmas+antras
+@app.route("/skaicius") #Route 2
+def skaiciuoti():
+    sum = sudetis(1,2)
+    return sum
 
 @app.route("/skaicius") # Route 3
 def skaiciavimo():
